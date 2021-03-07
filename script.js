@@ -6,9 +6,56 @@ let iconfile;
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 
+searchButton.addEventListener('click', (e)=> {
+    e.preventDefault();
+    getWeather(searchInput.value);
+    searchInput.value='';
+});
+
+const getWeather=async (city)=> {
+    try{
+        const response= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0f0f5087f3320866023c0693e881b05f`,
+
+        {mode: 'cors'}
+        );
+
+        const weatherData= await response.json();
+        console.log(weatherData);
+        const{name}=weatherData;
+        const{feels_like}=weatherData.main;
+        const{id,main}=weatherData.weather[0];
+        loc.textContent=name;
+        climate;textContent=main;
+        tempvalue.textContent=Math.round(feels_like-273 + 47);
+        if(id<300 && id>200) {
+            tempicon.src="./icons/thunderstorm.svg"
+        }
+        else if(id<400 && id>300) {
+            tempicon.src="./icons/drizzle.svg"
+        }
+        else if(id<600 && id>500) {
+            tempicon.src="./icons/rain.svg"
+        }
+        else if(id<700 && id>600) {
+            tempicon.src="./icons/snow.svg"
+        }
+        else if(id<800 && id>700) {
+            tempicon.src="./icons/mist.svg"
+        }
+        else if(id===800) {
+            tempicon.src="./icons/sunny.svg"
+        }
+
+        
+    }
+    catch(error) {
+        alert('city not found');
+    }
+
+};
 
 
-
+// Loads content from api request
 window.addEventListener("load" ,()=> {
     
     let long;
@@ -22,7 +69,7 @@ window.addEventListener("load" ,()=> {
             lat=postion.coords.latitude;
             const proxy="https://cors-anywhere.herokuapp.com/"
 
-            const api=`${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=0f0f5087f3320866023c0693e881b05f `
+            const api=`${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=0f0f5087f3320866023c0693e881b05f      `
 
             fetch(api).then((response) => {
                 
@@ -38,12 +85,36 @@ window.addEventListener("load" ,()=> {
 
                 loc.textContent=name;
                 climate.textContent=main;
-                tempvalue.textContent=Math.round(feels_like-32);
+                tempvalue.textContent=Math.round(feels_like-273 + 47);
+                // Icons
+                if(id<300 && id>200) {
+                    tempicon.src="./icons/thunderstorm.svg"
+                }
+                else if(id<400 && id>300) {
+                    tempicon.src="./icons/drizzle.svg"
+                }
+                else if(id<600 && id>500) {
+                    tempicon.src="./icons/rain.svg"
+                }
+                else if(id<700 && id>600) {
+                    tempicon.src="./icons/snow.svg"
+                }
+                else if(id<800 && id>700) {
+                    tempicon.src="./icons/mist.svg"
+                }
+                else if(id===800) {
+                    tempicon.src="./icons/sunny.svg"
+                }
+
+                console.log(data);
+
             })
 
-        }
+    }
 
         
 
         )}
+
+
 })

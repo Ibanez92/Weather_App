@@ -20,8 +20,9 @@ window.addEventListener("load" ,()=> {
             
             long=postion.coords.longitude;
             lat=postion.coords.latitude;
+            const proxy="https://cors-anywhere.herokuapp.com/"
 
-            const api=` api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=0f0f5087f3320866023c0693e881b05f `
+            const api=`${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=0f0f5087f3320866023c0693e881b05f `
 
             fetch(api).then((response) => {
                 

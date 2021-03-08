@@ -1,5 +1,5 @@
 # Weather_App
-Weather Application using HTML, CSS, Javascript/ES6, and the Open Weather API. When you open the application it will ask the user for their current location. If given permission, it will upload the users temperature, and condition of weather with an icon matching its temperature condition. It can also tell the weather of any particular city by typing it into the search input bar.
+Weather App is a mobile/desktop application that uses HTML, CSS, Javascript/ES6, and the Open Weather API. When you open the application it will ask the user for their current location. If given permission, it will upload the users temperature, and condition of weather with an icon matching its temperature condition. It can also tell the weather of any particular city by typing it into the search input bar.
 
 # Weather App Demo Video
 

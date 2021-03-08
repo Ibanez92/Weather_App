@@ -4,6 +4,7 @@ Weather Application using HTML, CSS, Javascript/ES6, and the Open Weather API. W
 # Weather App Demo Video
 
 ![Animated GIF-downsized_large (weatherapp)](https://user-images.githubusercontent.com/69645144/110286694-58c34d80-7fb3-11eb-9a7f-ab3040207f53.gif)
+![Animated GIF-sourceweatherapp](https://user-images.githubusercontent.com/69645144/110287966-4f3ae500-7fb5-11eb-92b6-6b7c46b61688.gif)
 
 
 # Weather App Demo Screenshots

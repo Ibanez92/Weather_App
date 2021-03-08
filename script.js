@@ -26,7 +26,7 @@ const getWeather=async (city)=> {
         const{id,main}=weatherData.weather[0];
         loc.textContent=name;
         climate.textContent=main;
-        tempvalue.textContent=Math.round(feels_like-273 + 46);
+        tempvalue.textContent=Math.round(feels_like-273 + 43);
         if(id<300 && id>200) {
             tempicon.src="./icons/thunderstorm.svg"
         }
@@ -45,7 +45,9 @@ const getWeather=async (city)=> {
         else if(id===800) {
             tempicon.src="./icons/sunny.svg"
         }
-
+        else if(id<805 && id>799) {
+            tempicon.src="./icons/clouds.svg"
+        }
         
     }
     catch(error) {
@@ -85,7 +87,7 @@ window.addEventListener("load" ,()=> {
 
                 loc.textContent=name;
                 climate.textContent=main;
-                tempvalue.textContent=Math.round(feels_like-273 + 46);
+                tempvalue.textContent=Math.round(feels_like-273 + 43);
                 // Icons
                 if(id<300 && id>200) {
                     tempicon.src="./icons/thunderstorm.svg"
@@ -104,6 +106,9 @@ window.addEventListener("load" ,()=> {
                 }
                 else if(id===800) {
                     tempicon.src="./icons/sunny.svg"
+                }
+                else if(id<805 && id>799) {
+                    tempicon.src="./icons/clouds.svg"
                 }
 
                 console.log(data);

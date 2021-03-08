@@ -25,8 +25,8 @@ const getWeather=async (city)=> {
         const{feels_like}=weatherData.main;
         const{id,main}=weatherData.weather[0];
         loc.textContent=name;
-        climate;textContent=main;
-        tempvalue.textContent=Math.round(feels_like-273 + 47);
+        climate.textContent=main;
+        tempvalue.textContent=Math.round(feels_like-273 + 46);
         if(id<300 && id>200) {
             tempicon.src="./icons/thunderstorm.svg"
         }
@@ -63,11 +63,11 @@ window.addEventListener("load" ,()=> {
 
     if(navigator.geolocation) {
 
-        navigator.geolocation.getCurrentPosition((postion)=> {
+        navigator.geolocation.getCurrentPosition((position)=> {
             
-            long=postion.coords.longitude;
-            lat=postion.coords.latitude;
-            const proxy="https://cors-anywhere.herokuapp.com/"
+            long=position.coords.longitude;
+            lat=position.coords.latitude;
+            const proxy="https://cors-anywhere.herokuapp.com/";
 
             const api=`${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=0f0f5087f3320866023c0693e881b05f      `
 
@@ -85,7 +85,7 @@ window.addEventListener("load" ,()=> {
 
                 loc.textContent=name;
                 climate.textContent=main;
-                tempvalue.textContent=Math.round(feels_like-273 + 47);
+                tempvalue.textContent=Math.round(feels_like-273 + 46);
                 // Icons
                 if(id<300 && id>200) {
                     tempicon.src="./icons/thunderstorm.svg"

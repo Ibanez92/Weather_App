@@ -2,8 +2,8 @@
 Weather App is a mobile/desktop application that uses HTML, CSS, Javascript/ES6, and the Open Weather API. When you open the application it will ask the user for their current location. If given permission, it will upload the users temperature, and condition of weather with an icon matching its temperature condition. It can also tell the weather of any particular city by typing it into the search input bar. 
 
 # CORS Server UPDATE! 
-https://cors-anywhere.herokuapp.com/corsdemo
-Unlock demo on this browser first to start application. Details in next tab.
+Visit this website and click the, "unlock demo" button, to start application with API. Details in next tab. https://cors-anywhere.herokuapp.com/corsdemo
+
 # MUST DO WHEN RUNNING APPLICATION
 From February 1st. 2021, cors-anywhere.herokuapp.com will only serve requests after the visitor has completed a challenge: The user (developer) must visit a page at cors-anywhere.herokuapp.com to temporarily unlock the demo for their browser. This allows developers to try out the functionality, to help with deciding on self-hosting or looking for alternatives.
  https://github.com/Rob--W/cors-anywhere/issues/301

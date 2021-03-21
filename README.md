@@ -4,7 +4,7 @@ Weather App is a mobile/desktop application that uses HTML, CSS, Javascript/ES6,
 # CORS Server UPDATE! 
 Visit this website and click the, "Rrequest temporary access to the demo server" button, to start application with API. After clicking to allow access, now the server can be used when typed in the URL. Details in next tab. https://cors-anywhere.herokuapp.com/corsdemo
 
-# MUST DO WHEN RUNNING APPLICATION
+# Details of CORS update
 From February 1st. 2021, cors-anywhere.herokuapp.com will only serve requests after the visitor has completed a challenge: The user (developer) must visit a page at cors-anywhere.herokuapp.com to temporarily unlock the demo for their browser. This allows developers to try out the functionality, to help with deciding on self-hosting or looking for alternatives.
  https://github.com/Rob--W/cors-anywhere/issues/301
 
